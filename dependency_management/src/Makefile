@@ -15,5 +15,3 @@ requirements:                           ## Upgrade requirements (in requirements
 
 upgrade: requirements install           ## Run 'requirements' and 'install' targets
 
-test:                                   ## Run the testcases
-	tox
