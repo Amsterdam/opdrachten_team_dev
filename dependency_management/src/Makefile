@@ -1,5 +1,7 @@
 # This Makefile is based on the Makefile defined in the Python Best Practices repository:
 # https://git.datapunt.amsterdam.nl/Datapunt/python-best-practices/blob/master/dependency_management/
+#
+# VERSION = 2020.01.29
 
 PYTHON = python3
 
