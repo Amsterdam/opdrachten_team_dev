@@ -24,18 +24,7 @@ We maken gebruik van een multistage Dockerfile waarmee we drie versies van de im
 Om te zorgen dat docker container lokaal toegang heeft tot bestanden in het host-system is het van belang het bestand `docker-compose.override.yml.example` te kopiëren naar `docker-compose.override.yml`, en daarin de `user` attributen aan te passen naar jouw eigen user id. Zodoende heeft de container de juiste rechten om bijvoorbeeld migraties aan te maken en weg te schrijven.
 
 ## Dependency management
-Zie ook https://github.com/Amsterdam/opdrachten_team_dev/tree/feature/project_architecture/dependency_management.
-
-Het project bevat twee bestanden die als bron voor de dependencies dienen:
-- requirements.in
-- requirements_dev.in
-De eerste bevat requirements die nodig zijn om de applicatie in productie te draaien, de tweede bevat extra development requirements welke bijvoorbeeld nodig zijn om testcases uit te voeren.
-Beide bestanden bevatten in de regel geen pinned dependencies (bijvoorbeeld Django==3.0.1), tenzij om duidelijke redenen een bepaalde versie specifiek nodig is in het project, en deze niet geüpgrade mag worden naar een latere versie.
-Door middel van enkele Make targets maintainen we de requirements:
-- `make install` installeert de bestaande requirements zoals gedefinieerd in requirements.txt en requirements_dev.txt.
-- `make requirements` leest de `.in` bestanden in en maakt op basis daarvan de `requirements[_dev].txt` bestanden. Deze bevatten altijd de laatste versies van de dependencies, tenzij gepinned in de `requirements[_dev].in` bestanden.
-- `make upgrade` voert `make requirements` uit, en installeert deze direct lokaal in de virtualenv.
-Door deze werkwijze gelijkmatig in onze projecten door te voeren zijn we in staat in korte tijd vele projecten automatisch te upgraden. `make upgrade && make test` is voldoende om alle requirements te upgraden en te testen of alles naar behoren werkt.
+Zie https://github.com/Amsterdam/opdrachten_team_dev/tree/feature/project_architecture/dependency_management.
 
 ## Deployments
 Zoals in de Jenkinsfile gedefinieerd hanteren we de volgende deployment strategie:
