@@ -31,3 +31,15 @@ Zoals in de Jenkinsfile gedefinieerd hanteren we de volgende deployment strategi
 - Alle pushes naar `master` deployen we naar acceptatie.
 - Alle tags die aan het semver formaat voldoen (x.y.z*) deployen we naar productie.
 Jenkins scant periodiek de repository en deployed automatisch.
+
+## gitignore
+
+Het is aan te raden om een global .gitignore bestand in te stellen zodat bijvoorbeeld de gekopieerde `docker-compose.override.yml` bestand door git genegeerd wordt, bivoorbeeld...
+
+```gitignore
+# ~/.gitignore
+docker-compose.override.yml
+.idea/
+.env
+.python-version
+```
