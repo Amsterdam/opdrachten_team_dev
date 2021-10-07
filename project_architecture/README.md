@@ -34,7 +34,7 @@ Jenkins scant periodiek de repository en deployed automatisch.
 
 ## gitignore
 
-Het is aan te raden om een global .gitignore bestand in te stellen zodat bijvoorbeeld de gekopieerde `docker-compose.override.yml` bestand door git genegeerd wordt, bivoorbeeld...
+Het is aan te raden om een global .gitignore bestand in te stellen zodat bijvoorbeeld het gekopieerde `docker-compose.override.yml` bestand door git genegeerd wordt, bijvoorbeeld...
 
 ```gitignore
 # ~/.gitignore
