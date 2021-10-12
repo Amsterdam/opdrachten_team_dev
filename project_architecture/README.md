@@ -43,3 +43,9 @@ docker-compose.override.yml
 .env
 .python-version
 ```
+
+Je kunt vervolgens git configureren om dit bestanden te gebruiken als globale `excludesfilter`:
+
+```bash
+git config --global core.excludesfile ~/.gitignore
+```
