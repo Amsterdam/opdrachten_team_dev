@@ -7,8 +7,9 @@ The goal of this topic to get all Python projects in line and to handle dependen
 
 1. Makefile: Entrypoint containing the same base targets in each project
 2. requirements.in: Base requirements file
-3. requirements_dev.txt: Base requirements file for development requirements
+3. requirements_dev.in: Base requirements file for development requirements
 4. requirements.txt: Compiled requirements with pinned versions. Includes sub-requirements.
+5. requirements_dev.txt: Compiled development requirements with pinned versions. Includes sub-requirements.
 
 ### Makefile
 
